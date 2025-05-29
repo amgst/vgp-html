@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vance Graphix & Print - Printing Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom styles -->
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100vh;
+      }
+      .dropdown-menu {
+        display: none;
+      }
+      .group:hover .dropdown-menu {
+        display: block;
+      }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Top Bar -->
+    <div class="bg-black text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span>Call Us Now 1300 66 96 88</span>
+                <span class="ml-2 text-blue-400">Design</span>
+            </div>
+            <div class="text-yellow-400">Established Since 2000</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg" x-data="{ isOpen: false }">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="https://vancegraphix.com.au/wp-content/uploads/2021/02/logo-vgp.png " alt="Vance Graphix & Print" class="h-12">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+                    
+                    <!-- Web Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Web
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Web Design</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Web Development</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">SEO Services</a>
+                        </div>
+                    </div>
+
+                    <!-- Print Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Print
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Offset Print</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Digital Print</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Screen Print</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Large Format</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Design</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">E-Commerce</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Portfolio</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">About Us</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-gray-500 hover:text-gray-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div x-show="isOpen" class="md:hidden pb-4">
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
+                
+                <!-- Mobile Web Dropdown -->
+                <div x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full text-left py-2 text-gray-700 hover:text-blue-500 flex items-center justify-between">
+                        Web
+                        <svg class="w-4 h-4" :class="{ 'transform rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Web Design</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Web Development</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">SEO Services</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Print Dropdown -->
+                <div x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full text-left py-2 text-gray-700 hover:text-blue-500 flex items-center justify-between">
+                        Print
+                        <svg class="w-4 h-4" :class="{ 'transform rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Offset Print</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Digital Print</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Screen Print</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Large Format</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Design</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">E-Commerce</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Portfolio</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">About Us</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide relative">
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-50">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://vancegraphix.com.au/wp-content/uploads/2021/02/97461121-2282-4f12-ad80-e999fa7cb07f.jpg');"></div>
+                </div>
+                <div class="relative container mx-auto px-4 h-full flex items-center">
+                    <div class="text-center mx-auto max-w-3xl">
+                        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                            Get Ready to
+                            <span class="block text-4xl md:text-5xl mt-2">Printing Solutions</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-white mb-8">
+                            Offset Print, Digital Print, Screen Print, Large Format Print
+                        </p>
+                        <button class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+                            Get Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide relative">
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-50">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://vancegraphix.com.au/wp-content/uploads/2021/02/97461121-2282-4f12-ad80-e999fa7cb07f.jpg');"></div>
+                </div>
+                <div class="relative container mx-auto px-4 h-full flex items-center">
+                    <div class="text-center mx-auto max-w-3xl">
+                        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                            Professional Design
+                            <span class="block text-4xl md:text-5xl mt-2">Creative Solutions</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-white mb-8">
+                            Bringing Your Ideas to Life with Expert Design Services
+                        </p>
+                        <button class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide relative">
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-50">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://vancegraphix.com.au/wp-content/uploads/2021/02/97461121-2282-4f12-ad80-e999fa7cb07f.jpg');"></div>
+                </div>
+                <div class="relative container mx-auto px-4 h-full flex items-center">
+                    <div class="text-center mx-auto max-w-3xl">
+                        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                            Digital Excellence
+                            <span class="block text-4xl md:text-5xl mt-2">Web Solutions</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-white mb-8">
+                            Custom Web Development & E-Commerce Solutions
+                        </p>
+                        <button class="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+                            Explore Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-l-lg">
+        <div class="flex flex-col space-y-4">
+            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+    </script>
+</body>
+</html>
