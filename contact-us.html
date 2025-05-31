@@ -1,0 +1,224 @@
+<!-- Contact Page -->
+<section class="bg-gray-50 py-16">
+  <div class="container mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">Get In Touch</h1>
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        Thank you for your interest in speaking with us. Whether you have a question about our printing, projects, or would
+        like to discuss an upcoming project, we are available to help. We can make that happen.
+        Filling out the form would help us get the right person in touch with you.
+      </p>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Office Locations -->
+      <div class="space-y-8">
+        <!-- Australia Offices -->
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Australia Office</h2>
+          
+          <!-- Sydney Office -->
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Sydney Office</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center text-gray-600">
+                <Phone class="w-5 h-5 text-yellow-500 mr-3" />
+                <a href="tel:+61470642633" class="hover:text-yellow-500">+61 470 642 633</a>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <Mail class="w-5 h-5 text-yellow-500 mr-3" />
+                <a href="mailto:ahmed@vancegraphix.com.au" class="hover:text-yellow-500">ahmed@vancegraphix.com.au</a>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <MapPin class="w-5 h-5 text-yellow-500 mr-3" />
+                <span>44 Flushcombe Rd, Blacktown</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Brisbane Office -->
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Brisbane Office</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center text-gray-600">
+                <Phone class="w-5 h-5 text-yellow-500 mr-3" />
+                <a href="tel:+61404777738" class="hover:text-yellow-500">+61 404 777 738</a>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <Mail class="w-5 h-5 text-yellow-500 mr-3" />
+                <a href="mailto:info@vancegraphix.com.au" class="hover:text-yellow-500">info@vancegraphix.com.au</a>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <MapPin class="w-5 h-5 text-yellow-500 mr-3" />
+                <span>280 Yarrabilba Dr, Yarrabilba, QLD, 4207</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- UAE Office -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">United Arab Emirates Office</h2>
+            <ul class="space-y-4">
+              <li class="flex items-center text-gray-600">
+                <Phone class="w-5 h-5 text-yellow-500 mr-3" />
+                <a href="tel:+97150499143" class="hover:text-yellow-500">+971 50 49 94 143</a>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <Mail class="w-5 h-5 text-yellow-500 mr-3" />
+                <a href="mailto:info@vancegraphix.com.au" class="hover:text-yellow-500">info@vancegraphix.com.au</a>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <MapPin class="w-5 h-5 text-yellow-500 mr-3" />
+                <span>Industrial Area 3, Sharjah UAE</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white rounded-lg p-8 shadow-sm">
+        <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+          <input type="hidden" name="form-name" value="contact" />
+          
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone No</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            />
+          </div>
+
+          <div>
+            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Select Service</label>
+            <select
+              id="service"
+              name="service"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            >
+              <option value="">Select a service</option>
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Print Services">Print Services</option>
+              <option value="Branding">Branding</option>
+              <option value="E-Commerce">E-Commerce</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-yellow-400 text-black py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors duration-300 font-semibold"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Payment Section -->
+    <div class="mt-16 pt-16 border-t border-gray-200">
+      <h2 class="text-3xl font-bold text-center mb-12">Payment Options</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div class="text-center md:text-left">
+          <img 
+            src="/images/logo/vance-graphics-logo.png" 
+            alt="Vance Graphix & Print" 
+            class="h-16 mb-6 mx-auto md:mx-0"
+          />
+          <h3 class="text-xl font-bold mb-4">Vance Graphix & Print</h3>
+          <p class="text-gray-600 mb-2">Yarrabilba, QLD, 4207</p>
+          <div class="mb-4">
+            <span class="text-yellow-400">★★★★★</span>
+            <span class="ml-2 text-gray-600">5.0 stars</span>
+          </div>
+          <p class="text-sm text-gray-500">Powered by oneflare.com.au</p>
+        </div>
+
+        <!-- PayPal -->
+        <div class="text-center">
+          <h3 class="text-xl font-bold mb-6">PayPal</h3>
+          <img 
+            src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" 
+            alt="PayPal Logo" 
+            class="h-16 mx-auto mb-4"
+          />
+        </div>
+
+        <!-- Bank Details -->
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-xl font-bold mb-4">EFT Details</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>Bank: ANZ</li>
+              <li>Account Name: Vance Graphix & Print</li>
+              <li>BSB: 012 408</li>
+              <li>Account: 192580993</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Postal Address</h3>
+            <address class="text-gray-600">
+              Vance Graphix & Print<br>
+              82 Tallwoods Circuit<br>
+              Yarrabilba, QLD 4207
+            </address>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Button -->
+      <div class="text-center mt-12">
+        <a 
+          href="https://www.trustpilot.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-block border-2 border-gray-300 text-gray-600 px-8 py-3 rounded-lg hover:border-yellow-400 hover:text-yellow-500 transition-colors duration-300"
+        >
+          Review us on Trustpilot
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
