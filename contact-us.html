@@ -22,7 +22,124 @@
         display: block;
       }
     </style>
-</head><!-- Contact Page -->
+</head>
+<body class="font-sans">
+    <!-- Top Bar -->
+    <div class="bg-black text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span>Call Us Now 1300 66 96 88</span>
+                <span class="ml-2 text-blue-400">Design</span>
+            </div>
+            <div class="text-yellow-400">Established Since 2000</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg" x-data="{ isOpen: false }">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="https://vancegraphix.com.au/wp-content/uploads/2021/02/logo-vgp.png " alt="Vance Graphix & Print" class="h-12">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+                    
+                    <!-- Web Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Web
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Web Design</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Web Development</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">SEO Services</a>
+                        </div>
+                    </div>
+
+                    <!-- Print Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Print
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Offset Print</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Digital Print</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Screen Print</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Large Format</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Design</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">E-Commerce</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Portfolio</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">About Us</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-gray-500 hover:text-gray-600">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div x-show="isOpen" class="md:hidden pb-4">
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
+                
+                <!-- Mobile Web Dropdown -->
+                <div x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full text-left py-2 text-gray-700 hover:text-blue-500 flex items-center justify-between">
+                        Web
+                        <svg class="w-4 h-4" :class="{ 'transform rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Web Design</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Web Development</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">SEO Services</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Print Dropdown -->
+                <div x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full text-left py-2 text-gray-700 hover:text-blue-500 flex items-center justify-between">
+                        Print
+                        <svg class="w-4 h-4" :class="{ 'transform rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Offset Print</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Digital Print</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Screen Print</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Large Format</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Design</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">E-Commerce</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Portfolio</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">About Us</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-500">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
 <section class="bg-gray-50 py-16">
   <div class="container mx-auto px-4">
     <!-- Header -->
